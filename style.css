@@ -1,0 +1,148 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   box-sizing: border-box;
+}
+
+body {
+   height: 100%;
+   min-width: 100%;
+   background: #f5ebe0;
+}
+
+.mainbox {
+   width: 100%;
+   background-color: aliceblue;
+   margin: 150px auto;
+   max-width: 540px;
+   padding: 30px 60px;
+   border-radius: 50px;
+   box-shadow: 0 0 50px black;
+
+}
+
+.mainbox h1 {
+   text-align: left;
+   margin-bottom: 40px;
+
+}
+
+.userInputBox {
+   display: flex;
+   /* background-color: yellow; */
+   justify-content: space-between;
+   margin-bottom: 50;
+   outline: 30px auto gold;
+   outline-offset:10px;
+   border-radius: 30px;
+   margin-bottom: 40px;
+}
+
+input {
+   flex: 1;
+   padding: 10px;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+button{
+   background: none;
+   padding: 10px; 
+   font-size: 18px;
+   border: 1px solid red ;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: background-color 0.7s ease;
+}
+button:hover{
+   background-color: aqua;
+}
+ul li{
+   list-style: none;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   padding: 12px 8px 12px 50px;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   margin-block: 10px;
+}
+
+ul li::before{
+   content: '';
+   position: absolute;
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   background: url(unchecked.png);
+   background-size: cover;
+   background-position: center;
+   top:12px;
+   left: 8px;
+}
+
+ul li.checked{
+   background: #3700a4;
+   color: #fff;
+   border-radius: 50px;
+}
+
+ul li.checked::before{
+   background: url(checked.png);
+   background-size: cover;
+}
+ul li span{
+   position: absolute;
+   top: 10px;
+   margin-right: 5px;
+   width: 30px;
+   height: 30px;
+   font-size: 22px;
+   color: #000;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+}
+
+ul li.checked span{
+   color: #ffffff;
+}
+
+ul li.checked span:hover{
+   background: #fff;
+   color: #000;
+}
+
+ul li span:hover{
+   background: #000;
+   color: #fff;
+}
+
+@media (max-width:400px){
+   .mainbox{
+      max-width: 320px;
+   }
+   .userInputBox{
+      /* background-color: yellow; */
+   }
+   input{
+      flex: 0;
+      font-size: 15px;
+      padding: 0px;
+
+   }
+   button{
+      font-size: 15px;
+   }
+
+}
+@media (min-width:400px) and (max-width: 545px){
+   .mainbox{
+      max-width: 400px;
+   }
+}
